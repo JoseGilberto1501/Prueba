@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.View.Configuration">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout >
+                <Frame HorizontalOptions="CenterAndExpand" >
+                    <!--Source="{Binding ImageSource}"-->
+                    <Image Source="Profile.png" HeightRequest="50" WidthRequest="50"/>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Path=ChangeImageCommand}"/>
+                    </Image.GestureRecognizers>
+                </Frame>
+                <Label Text="Informacion Personal" TextColor="#E91E63" HorizontalOptions="Start"></Label>
+                <Entry x:Name="nombretxt" Placeholder="* Nombre Completo" Text="{Binding Datos.Nombre, Mode=TwoWay}"></Entry>
+                <Entry Placeholder="* Apellidos" Text="{Binding Datos.Apellidos, Mode=TwoWay}"></Entry>
+                <Entry Placeholder="* Correo" Text="{Binding Datos.Email, Mode=TwoWay}"></Entry>
+                <Entry Placeholder="* Contraseña" Text="{Binding Datos.Contrasena, Mode=TwoWay}" IsPassword="True"></Entry>
+                <Entry Placeholder="* Telefono/Celular" Text="{Binding Datos.Telefono, Mode=TwoWay}"></Entry>
+                <Entry Placeholder="* Dirección Entrega" Text="{Binding Datos.Direccion, Mode=TwoWay}"></Entry>
+                <Button x:Name="btnVer" 
+                        Text="Actualizar Datos" 
+                        Command="{Binding ActualizarCommand}" 
+                        BackgroundColor="#E91E63" 
+                        TextColor="White" 
+                        Font="Bold"></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="Proyecto.View.Informacion">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout >
+                <Frame HorizontalOptions="CenterAndExpand" >
+                    <!--Source="{Binding ImageSource}"-->
+                    <Image Source="Profile.png" HeightRequest="50" WidthRequest="50"/>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Path=ChangeImageCommand}"/>
+                    </Image.GestureRecognizers>
+                </Frame>
+                <Label Text="Informacion Personal" TextColor="#E91E63" HorizontalOptions="Start"></Label>
+                <Entry x:Name="nombretxt" Placeholder="* Nombre Completo" Text="{Binding nombre, Mode=TwoWay}"></Entry>
+                <Entry Placeholder="* Apellidos" Text="{Binding apellidos, Mode=TwoWay}"></Entry>
+                <Entry Placeholder="* Correo" Text="{Binding email, Mode=TwoWay}"></Entry>
+                <Entry Placeholder="* Contraseña" Text="{Binding contrasena, Mode=TwoWay}" IsPassword="True"></Entry>
+                <Entry Placeholder="* Telefono/Celular" Text="{Binding telefono, Mode=TwoWay}"></Entry>
+                <Entry Placeholder="* Dirección Entrega" Text="{Binding direccion, Mode=TwoWay}"></Entry>
+                <maps:Map></maps:Map>
+                
+                <Button x:Name="btnVer" 
+                        Text="Registrar" 
+                        Command="{Binding GuardarCommand}" 
+                        BackgroundColor="#E91E63" 
+                        TextColor="White" 
+                        Font="Bold"></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+</ContentPage>

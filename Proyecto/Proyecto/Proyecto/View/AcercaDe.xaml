@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.View.AcercaDe"
+             Title="Acerca De"
+             Icon="info.png">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Label Text="Universidad Latina de Costa Rica" TextColor="Green" FontFamily="bold"></Label>
+            <Label Text="Proyecto Xamarin Forms" TextColor="Green" FontFamily="bold"></Label>
+            <Label Text="Integrantes" TextColor="Green" FontFamily="bold"></Label>
+            <Label Text="Aaron Rojas Alvarado" TextColor="Green" FontFamily="bold"></Label>
+            <Label Text="José Gilberto Zúñiga Vargas" TextColor="Green" FontFamily="bold"></Label>
+			<Label Text="Usando Github para control de versiones" TextColor="Green" FontFamily="bold"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

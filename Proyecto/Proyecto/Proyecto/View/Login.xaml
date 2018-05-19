@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.View.Login">
+    <ScrollView>
+        <Grid x:Name="LayoutRoot" BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <ActivityIndicator IsRunning="{Binding IsBusy, Mode=TwoWay}" Grid.RowSpan="3" Color="Red" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+            <StackLayout Grid.Row="1" Orientation="Vertical" Margin="0,40,0,10">
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="0,5,0,0" BackgroundColor="White" Opacity="0.8">
+                    <Image Source="Logo.jpg" Aspect="AspectFit" Margin="10" HeightRequest="200" WidthRequest="200"  VerticalOptions="Center" HorizontalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
+                <StackLayout Orientation="Vertical" Margin="40,20">
+                    <Entry Text="{Binding txtEmail, Mode=TwoWay}" x:Name="Email" TextColor="Gray" Placeholder="Email" PlaceholderColor="Gray" Keyboard="Email" FontSize="18" HorizontalTextAlignment="Start"/>
+                    <Entry Text="{Binding txtPassword, Mode=TwoWay}" x:Name="PasswordEntry" TextColor="Gray" Placeholder="Contraseña" PlaceholderColor="Gray" IsPassword="True" FontSize="18" HorizontalTextAlignment="Start"/>
+                    <Button Command="{Binding IniciarSessionCommand}"  Margin="0,10" Text="Iniciar Sesion" BackgroundColor="#E91E63" TextColor="White" FontSize="18" />
+                    <Button Clicked="BtnRegi_Clicked" Margin="0,10" Text="Resgistrarse" BackgroundColor="#E91E63" TextColor="White" FontSize="18"/>
+
+
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

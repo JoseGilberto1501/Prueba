@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.View.Master"
+             Title="Menu"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout BackgroundColor="White"                   
+                     Padding="0,0,0,10">
+                <Image Source="Profile.png"></Image>
+                <Label Text="Bienvenido: Jose" 
+                   FontSize="Medium"
+                   FontFamily="bold"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"></Label>
+            </StackLayout>
+            <StackLayout BackgroundColor="#E91E63" 
+                      VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand">
+                <Button Text="Pago"
+                        FontSize="Medium"
+                        FontFamily="bold"
+                        BackgroundColor="#E91E63"
+                        Image="pay.png"
+                        TextColor="White"
+                        x:Name="btnPago">
+                </Button>
+                <Button Text="Pedido"
+                        FontSize="Medium"
+                        FontFamily="bold"
+                        TextColor="White"
+                        BackgroundColor="#E91E63"
+                        Image="cart.png">
+                </Button>
+                <Button Text="Ayuda"
+                        FontSize="Medium"
+                        FontFamily="bold"
+                        TextColor="White"
+                        BackgroundColor="#E91E63"
+                        Image="help.png">
+                </Button>
+                <Button Text="Configuración"
+                        FontSize="Medium"
+                        FontFamily="bold"
+                        TextColor="White"
+                        BackgroundColor="#E91E63"
+                        Image="config.png"
+                        x:Name="btnConfi"
+                        Command="{Binding VerConfiguracion}">
+                </Button>
+                <Button Text="Acerca De"
+                        FontSize="Medium"
+                        FontFamily="bold"
+                        TextColor="White"
+                        BackgroundColor="#E91E63"
+                        Image="info.png"
+                        x:Name="btnAcerca">
+                </Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>   
+</ContentPage>

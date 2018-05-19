@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.View.Detail"
+             Title="Kary's Baker"
+             x:Name="Master">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="0,0,0,15">
+                <StackLayout>
+                    <Button Text="Galletas"
+                    Image="cookies.png"
+                    FontSize="Medium"
+                    FontFamily="bold"></Button>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="Cupcakes"
+                    Image="minicake.png"
+                    FontSize="Medium"
+                    FontFamily="bold"></Button>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="Respoteria"
+                    Image="confite.png"
+                    FontSize="Medium"
+                    FontFamily="bold"></Button>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="Pasteles"
+                    Image="queque.png"
+                    FontSize="Medium"
+                    FontFamily="bold"></Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>    
+</ContentPage>
