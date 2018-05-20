@@ -15,6 +15,7 @@
                 <Label Text="Informacion Personal" TextColor="#E91E63" HorizontalOptions="Start"></Label>
                 <Entry x:Name="nombretxt" Placeholder="* Nombre Completo" Text="{Binding Datos.Nombre, Mode=TwoWay}"></Entry>
                 <Entry Placeholder="* Apellidos" Text="{Binding Datos.Apellidos, Mode=TwoWay}"></Entry>
+				<Entry Placeholder="* Apellidos2" Text="{Binding Datos.Apellidos, Mode=TwoWay}"></Entry>
                 <Entry Placeholder="* Correo" Text="{Binding Datos.Email, Mode=TwoWay}"></Entry>
                 <Entry Placeholder="* Contraseña" Text="{Binding Datos.Contrasena, Mode=TwoWay}" IsPassword="True"></Entry>
                 <Entry Placeholder="* Telefono/Celular" Text="{Binding Datos.Telefono, Mode=TwoWay}"></Entry>
